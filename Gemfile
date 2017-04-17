@@ -50,5 +50,12 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
+group :test do
+  # Provide 1-line matchers to RSpec used in testing Rails functionality
+  gem 'shoulda-matchers', '~> 3.0', require: false
+  # Set of strategies for cleaning db between test runs (ensure clean slate for testing)
+  gem 'database_cleaner', '~> 1.5'
+end
+
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
