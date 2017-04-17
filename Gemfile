@@ -41,6 +41,8 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.4'
   # Automation framework for creating functional tests simulating how users interact with app
   gem 'capybara', '~> 2.5'
+  # Allows creation of objects needed for tests (including default values)
+  gem 'factory_girl_rails', '~> 4.5.0'
 end
 
 group :development do
@@ -57,7 +59,6 @@ group :test do
   gem 'shoulda-matchers', '~> 3.0', require: false
   # Set of strategies for cleaning db between test runs (ensure clean slate for testing)
   gem 'database_cleaner', '~> 1.5'
+  # Generates random data for tests
+  gem 'faker', '~> 1.6.1'
 end
-
-# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
